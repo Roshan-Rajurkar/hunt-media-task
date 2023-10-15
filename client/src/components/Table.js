@@ -24,8 +24,8 @@ const Table = () => {
     const [monthYear, setMonthYear] = useState(0);
     const [dateExcludes, setDateExcludes] = useState([]);
     const [days, setDays] = useState(0);
-    const [leadCount, setLeadCount] = useState(null);
-    const [expectedDRR, setExpectedDRR] = useState(null);
+    const [leadCount, setLeadCount] = useState(0);
+    const [expectedDRR, setExpectedDRR] = useState(0);
 
 
     const calculateDays = () => {
@@ -66,7 +66,7 @@ const Table = () => {
 
     // handling Save
     const handleSave = async () => {
-        if (startDate === "" || endDate === "s" || leadCount === null || expectedDRR === null) {
+        if (startDate === "" || endDate === "" || leadCount === null || expectedDRR === null) {
             alert('some fields are missing ');
             return;
         }
@@ -83,24 +83,24 @@ const Table = () => {
 
         await axios.post('/api', hunt);
 
-        setStartDate("")
-        setEndDate("")
-        setMonthYear(0)
-        setDays(0)
-        setLeadCount(null)
-        setExpectedDRR(null)
+        setStartDate("");
+        setEndDate("");
+        setMonthYear(0);
+        setDays(0);
+        setLeadCount(0);
+        setExpectedDRR(0);
 
         alert('save successfully😀')
     }
 
     // handling Cancel
     const handleCancel = () => {
-        setStartDate("")
-        setEndDate("")
-        setMonthYear(0)
-        setDays(0)
-        setLeadCount(null)
-        setExpectedDRR(null)
+        setStartDate("");
+        setEndDate("");
+        setMonthYear(0);
+        setDays(0);
+        setLeadCount(0);
+        setExpectedDRR(0);
     }
 
     return (
@@ -128,7 +128,7 @@ const Table = () => {
                             <input
                                 className='input__date'
                                 type="date"
-                                value={null}
+                                value={startDate}
                                 onChange={(e) => setStartDate(e.target.value)}
                             />
                         </td>
