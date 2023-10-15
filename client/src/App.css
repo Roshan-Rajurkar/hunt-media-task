@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+.add__tag {
+  background-color: rgb(118, 211, 248);
+  color: white;
+  padding: 3px 5px;
+  border-radius: 8px;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+  height: max-content;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.table__container {
+  margin-top: 20px;
+  border: 1px solid #000;
+}
+
+.input__date {
+  border: 1px solid rgb(196, 196, 196);
+  height: 30px;
+  padding: 2px 5px;
+  outline: none;
+}
+
+input[type=number] {
+  appearance: none;
+  outline: none;
+}
+
+.excluded__dates {
+  font-size: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: none;
+  height: 100%;
+}
+
+.btn__save,
+.btn__cancel {
+  padding: 5px 8px;
+  background-color: rgb(9, 186, 12);
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn__save:hover {
+  background-color: rgb(11, 158, 13);
+}
+
+.btn__cancel {
+  background-color: rgb(246, 129, 129);
+}
+
+.btn__cancel:hover {
+  background-color: rgb(232, 56, 56);
+}
+
+.date__excluded {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+}
+
+@media only screen and (max-width: 600px) {
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 5px;
+  }
+
+  .table__container {
+    overflow-x: auto;
+  }
+
+  .excluded__dates {
+    font-size: 10px;
+  }
+
+  .date__excluded {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: none;
+  }
+}
+
+.drr__heading {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  table {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  table {
+    font-size: 18px;
+  }
+}
